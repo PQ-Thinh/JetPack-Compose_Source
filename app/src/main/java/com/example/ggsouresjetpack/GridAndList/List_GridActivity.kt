@@ -22,41 +22,41 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             GGSouresJetpackTheme {
-                    MainApp()
+                    //MainApp()
             }
         }
     }
 }
 
-@Composable
-fun MainApp() {
-    var currentScreen by remember {
-        mutableStateOf(Screen.VideoDetailScreen)
-    }
-
-    Surface(
-        modifier = Modifier.fillMaxSize(),
-        color = MaterialTheme.colorScheme.background
-    ) {
-
-        if (currentScreen == Screen.VideoDetailScreen) {
-            VideoDetailScreen() {
-                currentScreen = Screen.CategoryScreen
-            }
-        } else {
-            CategoryScreen()
-        }
-
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    GGSouresJetpackTheme {
-        MainApp()
-    }
-}
+//@Composable
+//fun MainApp() {
+//    var currentScreen by remember {
+//        mutableStateOf(Screen.VideoDetailScreen)
+//    }
+//
+//    Surface(
+//        modifier = Modifier.fillMaxSize(),
+//        color = MaterialTheme.colorScheme.background
+//    ) {
+//
+//        if (currentScreen == Screen.VideoDetailScreen) {
+//            VideoDetailScreen() {
+//                currentScreen = Screen.CategoryScreen
+//            }
+//        } else {
+//            CategoryScreen()
+//        }
+//
+//    }
+//}
+//
+//@Preview(showBackground = true)
+//@Composable
+//fun DefaultPreview() {
+//    GGSouresJetpackTheme {
+//        MainApp()
+//    }
+//}
 
 enum class Screen {
     VideoDetailScreen,

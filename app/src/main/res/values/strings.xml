@@ -2,4 +2,5 @@
     <string name="app_name">GGSouresJetpack</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_state">StateActivity</string>
+    <string name="title_activity_navigation">NavigationActivity</string>
 </resources>

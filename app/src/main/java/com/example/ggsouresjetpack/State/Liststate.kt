@@ -1,11 +1,13 @@
 package com.example.ggsouresjetpack.State
 
 import android.annotation.SuppressLint
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material3.Checkbox
@@ -20,6 +22,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.graphics.Color
 import androidx.lifecycle.viewmodel.compose.viewModel
 
 
@@ -32,7 +36,11 @@ fun WellnessTaskItem(
     modifier: Modifier = Modifier
 ) {
     Row(
-        modifier = modifier, verticalAlignment = Alignment.CenterVertically
+        modifier = modifier
+            .padding(12.dp)
+            .shadow(2.dp, RoundedCornerShape(8.dp))
+            .background(Color.Gray)
+            .padding(8.dp), verticalAlignment = Alignment.CenterVertically
     ) {
         Text(
             modifier = Modifier
@@ -93,7 +101,7 @@ fun WellnessScreen(
     modifier: Modifier = Modifier,
     wellnessViewModel: WellnessViewModel = viewModel()
 ) {
-    Column(modifier = modifier) {
+    Column(modifier = modifier.background(Color.White)) {
         StatefulCounter()
 
         WellnessTasksList(

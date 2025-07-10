@@ -38,7 +38,6 @@ android {
         compose = true
     }
 }
-
 dependencies {
 
     implementation(libs.androidx.core.ktx)
@@ -63,4 +62,9 @@ dependencies {
     implementation("io.coil-kt:coil-compose:2.2.0")
     implementation("androidx.constraintlayout:constraintlayout-compose:1.0.1")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:{latest_version}")
+    implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.6.1")
+    implementation ("androidx.compose.runtime:runtime-livedata:1.9.0-beta01")
+    implementation ("androidx.navigation:navigation-compose:2.9.1")
+
+
 }
