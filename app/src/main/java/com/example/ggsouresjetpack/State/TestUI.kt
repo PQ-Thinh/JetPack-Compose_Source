@@ -35,7 +35,7 @@ import com.example.ggsouresjetpack.State.ui.theme.GGSouresJetpackTheme
 import com.example.ggsouresjetpack.ui.theme.Mojito
 
 
-@SuppressLint("UnrememberedMutableState")
+@SuppressLint("UnrememberedMutableState", "ViewModelConstructorInComposable")
 @Composable
 fun LoginScreen(){
     val loginViewModel: LoginViewModel = LoginViewModel()
