@@ -6,4 +6,5 @@
     <string name="title_activity_local">LocalActivity</string>
     <string name="title_activity_exam">ExamActivity</string>
     <string name="title_activity_theme">ThemeActivity</string>
+    <string name="title_activity_side_effects">SideEffectsActivity</string>
 </resources>

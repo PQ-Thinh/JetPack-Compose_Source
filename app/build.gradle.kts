@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    //id("kotlin-kapt")
 }
 
 android {
@@ -39,7 +40,6 @@ android {
     }
 }
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -59,12 +59,21 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    // Coil (chỉ dùng 1 phiên bản)
     implementation("io.coil-kt:coil-compose:2.2.0")
+    // ConstraintLayout for Compose
     implementation("androidx.constraintlayout:constraintlayout-compose:1.0.1")
+    // Compose Navigation + Lifecycle
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:{latest_version}")
     implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.6.1")
     implementation ("androidx.compose.runtime:runtime-livedata:1.9.0-beta01")
     implementation ("androidx.navigation:navigation-compose:2.9.1")
+//    // Hilt
+//    implementation ("com.google.dagger:hilt-android:2.57")
+//    annotationProcessor ("com.google.dagger:hilt-compiler:2.57")
+//    kapt("com.google.dagger:hilt-android-compiler:2.44")
+//    implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
 
+    implementation ("com.google.accompanist:accompanist-systemuicontroller:0.23.0")
 
 }
